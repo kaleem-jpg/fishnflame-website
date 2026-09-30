@@ -11,8 +11,10 @@ assets/logo/            vector logo variants in brand colours (SVG)
 assets/video/           logo animations (wide and vertical)
 ```
 
-## Deploy
-Upload the folder as-is to any static host, such as Vercel, Netlify, Cloudflare Pages, S3 or cPanel. Point the domain at it.
+## Deploy (Vercel)
+This is a static site with no build step. `vercel.json` sets caching and security headers.
+- **Dashboard:** go to vercel.com, choose Add New → Project, import `kaleem-jpg/fishnflame-website`, set Framework Preset to **Other**, leave the build command empty, and deploy. Every push to `main` redeploys.
+- **CLI:** run `vercel` in this folder for a preview deploy, or `vercel --prod` for production.
 
 ## Before going live
 - **Photos:** these are placeholders taken from the brand playbook and communication deck. The playbook's disclaimer says they are not free stock. Replace them with licensed or shot photography, keeping the same file names.
