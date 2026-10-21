@@ -75,6 +75,38 @@
     }, { threshold: 0.25 }).observe(closing);
   }
 
+  // Careers form (posts to FormSubmit, which emails info@fishnflame.in)
+  const form = document.getElementById("careersForm");
+  if (form) {
+    const success = document.getElementById("formSuccess");
+    const error = document.getElementById("formError");
+    const next = document.getElementById("formNext");
+    const MAX_CV = 5 * 1024 * 1024;
+
+    // Return to this same page after sending, on whichever domain the site is served from
+    next.value = `${location.origin}/careers?sent=1#apply`;
+
+    if (new URLSearchParams(location.search).get("sent") === "1") {
+      form.hidden = true;
+      success.hidden = false;
+      window.addEventListener("load", () => success.scrollIntoView({ block: "center" }));
+    }
+
+    form.addEventListener("submit", (e) => {
+      error.hidden = true;
+      const cv = form.querySelector('input[type="file"]').files[0];
+      if (cv && cv.size > MAX_CV) {
+        e.preventDefault();
+        error.textContent = "Your CV is larger than 5 MB. Please upload a smaller file.";
+        error.hidden = false;
+        return;
+      }
+      const btn = form.querySelector(".form__submit");
+      btn.disabled = true;
+      btn.textContent = "Sending…";
+    });
+  }
+
   // Footer year
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
