@@ -18,13 +18,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Outfit:wght@600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261021c">
 </head>
 <body class="page-careers">
   <a class="skip" href="#main">Skip to content</a>
 
   <!-- ============ NAV ============ -->
-  <header class="nav is-scrolled" id="nav">
+  <header class="nav" id="nav">
     <div class="container nav__inner">
       <a class="nav__brand" href="/" aria-label="FishnFlame home">
         <img src="/assets/logo/nav-mascot.svg" alt="" width="34" height="50" class="nav__mascot">
@@ -38,7 +38,7 @@
         <a href="/#vision">Vision</a>
         <a href="/#team">Meet the Team</a>
         <a href="/#contact" class="btn btn--flame btn--sm nav__cta">Partner with us</a>
-        <a href="/careers" class="btn btn--outline btn--sm nav__cta" aria-current="page">Careers</a>
+        <a href="/careers" class="btn btn--flame btn--sm nav__cta" aria-current="page">Careers</a>
       </nav>
       <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
@@ -50,49 +50,82 @@
 
     <!-- ============ CAREERS HERO ============ -->
     <section class="careers-hero">
-      <div class="careers-hero__media"><img src="/assets/img/fnf-crew.webp" alt="" fetchpriority="high"></div>
-      <div class="container careers-hero__inner">
-        <p class="eyebrow eyebrow--teal">Careers at FishnFlame</p>
-        <h1 class="title title--light">
-          <span class="t-bold">join the</span>
-          <span class="t-script t-flame">crew</span>
-        </h1>
-        <p class="lead">We're building India's first fish-focused QSR network, and we need people who are hungry to grow with us. Whether you're at the grill, running a store, or building the supply chain behind it, there's a seat at our table.</p>
-        <a href="#apply" class="btn btn--flame">Apply now</a>
+      <div class="checker" aria-hidden="true"></div>
+      <div class="container careers-hero__grid">
+        <div class="careers-hero__copy">
+          <p class="eyebrow eyebrow--teal">Careers at FishnFlame</p>
+          <h1 class="title title--light">
+            <span class="t-bold">join the</span>
+            <span class="t-script t-flame">crew</span>
+          </h1>
+          <p class="lead">We're building India's first fish-focused QSR network, and we need people who are hungry to grow with us. Whether you're at the grill, running a store, or building the supply chain behind it, there's a seat at our table.</p>
+          <div class="careers-hero__ctas">
+            <a href="#apply" class="btn btn--flame">Apply now</a>
+            <a href="#roles" class="btn btn--ghost">Explore roles</a>
+          </div>
+        </div>
+        <div class="careers-hero__art">
+          <figure class="careers-hero__photo"><img src="/assets/img/fnf-crew.webp" alt="A FishnFlame crew member assembling burgers in a branded cap and apron" fetchpriority="high"></figure>
+          <figure class="careers-hero__mini"><img src="/assets/img/team-serve.webp" alt="" loading="lazy"></figure>
+          <div class="sticker sticker--flame careers-hero__sticker">we're<br>hiring!</div>
+        </div>
       </div>
     </section>
 
     <!-- ============ ROLES ============ -->
-    <section class="section section--shell">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Where you could fit in</p>
-          <h2 class="title">
-            <span class="t-bold">find your</span>
-            <span class="t-bold">place on the <span class="t-script t-flame inline">line</span></span>
-          </h2>
+    <section class="section section--shell" id="roles">
+      <div class="container roles-grid">
+        <div class="roles-grid__main">
+          <div class="section-head reveal">
+            <p class="eyebrow">Where you could fit in</p>
+            <h2 class="title">
+              <span class="t-bold">find your</span>
+              <span class="t-bold">place on the <span class="t-script t-flame inline">line</span></span>
+            </h2>
+          </div>
+          <ul class="roles">
+            <li class="role reveal">
+              <span class="role__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6c6 7 9 12 9 17a9 9 0 0 1-18 0c0-5 3-10 9-17zM14 40h20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <h3>Store Crew &amp; Kitchen</h3><p>Cooks, grill and fry specialists, cashiers and service crew for our outlets.</p>
+            </li>
+            <li class="role reveal">
+              <span class="role__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 20h36M8 20l3-10h26l3 10M10 20v20h28V20M20 40V28h8v12" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></span>
+              <h3>Store Management</h3><p>Shift leads, assistant managers and store managers who run great restaurants.</p>
+            </li>
+            <li class="role reveal">
+              <span class="role__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M4 30c6-9 16-13 26-10l7-7v11l7 2-7 2v11l-7-7C20 35 10 37 4 30z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="29" cy="25" r="1.8" fill="currentColor"/></svg></span>
+              <h3>Supply Chain &amp; Quality</h3><p>Sourcing, processing, cold chain, logistics and food-safety roles.</p>
+            </li>
+            <li class="role reveal">
+              <span class="role__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 16h32v24H8zM18 16v-6h12v6M8 26h32" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></span>
+              <h3>Corporate &amp; Growth</h3><p>Marketing, franchise development, HR, finance, technology and operations.</p>
+            </li>
+          </ul>
         </div>
-        <ul class="roles">
-          <li class="role reveal"><h3>Store Crew &amp; Kitchen</h3><p>Cooks, grill and fry specialists, cashiers and service crew for our outlets.</p></li>
-          <li class="role reveal"><h3>Store Management</h3><p>Shift leads, assistant managers and store managers who run great restaurants.</p></li>
-          <li class="role reveal"><h3>Supply Chain &amp; Quality</h3><p>Sourcing, processing, cold chain, logistics and food-safety roles.</p></li>
-          <li class="role reveal"><h3>Corporate &amp; Growth</h3><p>Marketing, franchise development, HR, finance, technology and operations.</p></li>
-        </ul>
+        <figure class="roles-grid__img reveal">
+          <img src="/assets/img/chef-flame.webp" alt="A chef flambéing at the grill" loading="lazy">
+          <figcaption><span class="t-script">from kitchen</span> to corporate</figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- ============ APPLICATION FORM ============ -->
     <section class="section apply" id="apply">
       <div class="container apply__grid">
-        <div class="apply__intro reveal">
+        <aside class="apply__intro reveal">
           <p class="eyebrow eyebrow--teal">Apply</p>
           <h2 class="title title--light">
             <span class="t-bold">tell us about</span>
             <span class="t-script t-teal">yourself</span>
           </h2>
-          <p>Fill in your details and attach your CV. Your application goes straight to our team at <a href="mailto:info@fishnflame.in">info@fishnflame.in</a>, and we'll be in touch if there's a good fit.</p>
+          <p>It takes about two minutes. Your application goes straight to our team at <a href="mailto:info@fishnflame.in">info@fishnflame.in</a>, and we'll be in touch if there's a good fit.</p>
+          <ol class="apply__steps">
+            <li><span>01</span>Your details</li>
+            <li><span>02</span>The role</li>
+            <li><span>03</span>Your CV &amp; story</li>
+          </ol>
           <figure class="apply__img"><img src="/assets/img/team-aprons.webp" alt="" loading="lazy"></figure>
-        </div>
+        </aside>
 
         <div class="apply__card reveal">
           <div class="form-success" id="formSuccess" hidden>
@@ -102,94 +135,99 @@
             <a href="/" class="btn btn--flame">Back to home</a>
           </div>
 
-          <form class="form" id="careersForm" action="https://formsubmit.co/info@fishnflame.in" method="POST" enctype="multipart/form-data">
+          <form class="form" id="careersForm" action="https://formsubmit.co/info@fishnflame.in" method="POST" enctype="multipart/form-data" novalidate>
             <input type="hidden" name="_subject" value="New job application · FishnFlame Careers">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" id="formNext" value="https://www.fishnflame.in/careers?sent=1#apply">
             <input type="text" name="_honey" class="form__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-            <div class="form__row">
-              <div class="field">
-                <label for="name">Full name <span aria-hidden="true">*</span></label>
-                <input id="name" name="Full name" type="text" autocomplete="name" required>
+            <fieldset class="form__group">
+              <legend><span>01</span>Your details</legend>
+              <div class="form__row">
+                <div class="field">
+                  <label for="name">Full name <i>*</i></label>
+                  <input id="name" name="Full name" type="text" autocomplete="name" placeholder="e.g. Priya Sharma" required>
+                </div>
+                <div class="field">
+                  <label for="email">Email <i>*</i></label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone number <i>*</i></label>
+                  <input id="phone" name="Phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210" pattern="[0-9+()\-\s]{8,}" required>
+                </div>
+                <div class="field">
+                  <label for="city">Current city <i>*</i></label>
+                  <input id="city" name="City" type="text" autocomplete="address-level2" placeholder="e.g. Hyderabad" required>
+                </div>
               </div>
-              <div class="field">
-                <label for="email">Email <span aria-hidden="true">*</span></label>
-                <input id="email" name="email" type="email" autocomplete="email" required>
-              </div>
-            </div>
+            </fieldset>
 
-            <div class="form__row">
-              <div class="field">
-                <label for="phone">Phone number <span aria-hidden="true">*</span></label>
-                <input id="phone" name="Phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+()\-\s]{8,}" required>
+            <fieldset class="form__group">
+              <legend><span>02</span>The role</legend>
+              <div class="form__row">
+                <div class="field field--full">
+                  <label for="role">Position applying for <i>*</i></label>
+                  <div class="select">
+                    <select id="role" name="Position" required>
+                      <option value="" disabled selected>Select a role</option>
+                      <option>Store Crew / Service</option>
+                      <option>Kitchen / Cook</option>
+                      <option>Shift Lead / Assistant Manager</option>
+                      <option>Store Manager</option>
+                      <option>Supply Chain &amp; Procurement</option>
+                      <option>Quality &amp; Food Safety</option>
+                      <option>Marketing</option>
+                      <option>Franchise Development</option>
+                      <option>HR / Finance / Admin</option>
+                      <option>Technology</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field field--full" role="radiogroup" aria-labelledby="expLabel">
+                  <span class="field__label" id="expLabel">Total experience <i>*</i></span>
+                  <div class="pills">
+                    <label class="pill"><input type="radio" name="Experience" value="Fresher" required><span>Fresher</span></label>
+                    <label class="pill"><input type="radio" name="Experience" value="Under 1 year"><span>&lt; 1 yr</span></label>
+                    <label class="pill"><input type="radio" name="Experience" value="1-3 years"><span>1–3 yrs</span></label>
+                    <label class="pill"><input type="radio" name="Experience" value="3-5 years"><span>3–5 yrs</span></label>
+                    <label class="pill"><input type="radio" name="Experience" value="5-10 years"><span>5–10 yrs</span></label>
+                    <label class="pill"><input type="radio" name="Experience" value="10+ years"><span>10+ yrs</span></label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="company">Current company / role</label>
+                  <input id="company" name="Current company or role" type="text" autocomplete="organization" placeholder="Optional">
+                </div>
+                <div class="field">
+                  <label for="linkedin">LinkedIn profile</label>
+                  <input id="linkedin" name="LinkedIn" type="url" placeholder="https://linkedin.com/in/…">
+                </div>
               </div>
-              <div class="field">
-                <label for="city">Current city <span aria-hidden="true">*</span></label>
-                <input id="city" name="City" type="text" autocomplete="address-level2" required>
-              </div>
-            </div>
+            </fieldset>
 
-            <div class="form__row">
+            <fieldset class="form__group">
+              <legend><span>03</span>Your CV &amp; story</legend>
+              <label class="drop" for="cv">
+                <input id="cv" name="attachment" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                <span class="drop__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 32V10M15 19l9-9 9 9M8 30v8h32v-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="drop__text"><strong id="cvName">Upload your CV / resume</strong><small>Click to browse or drop a file here · PDF or Word, up to 5 MB</small></span>
+              </label>
               <div class="field">
-                <label for="role">Position applying for <span aria-hidden="true">*</span></label>
-                <select id="role" name="Position" required>
-                  <option value="" disabled selected>Select a role</option>
-                  <option>Store Crew / Service</option>
-                  <option>Kitchen / Cook</option>
-                  <option>Shift Lead / Assistant Manager</option>
-                  <option>Store Manager</option>
-                  <option>Supply Chain &amp; Procurement</option>
-                  <option>Quality &amp; Food Safety</option>
-                  <option>Marketing</option>
-                  <option>Franchise Development</option>
-                  <option>HR / Finance / Admin</option>
-                  <option>Technology</option>
-                  <option>Other</option>
-                </select>
+                <label for="message">Why do you want to join FishnFlame?</label>
+                <textarea id="message" name="Message" rows="4" placeholder="Tell us a little about yourself and what excites you about FishnFlame."></textarea>
               </div>
-              <div class="field">
-                <label for="experience">Total experience <span aria-hidden="true">*</span></label>
-                <select id="experience" name="Experience" required>
-                  <option value="" disabled selected>Select</option>
-                  <option>Fresher</option>
-                  <option>Less than 1 year</option>
-                  <option>1–3 years</option>
-                  <option>3–5 years</option>
-                  <option>5–10 years</option>
-                  <option>10+ years</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form__row">
-              <div class="field">
-                <label for="company">Current company / role</label>
-                <input id="company" name="Current company or role" type="text" autocomplete="organization">
-              </div>
-              <div class="field">
-                <label for="linkedin">LinkedIn profile</label>
-                <input id="linkedin" name="LinkedIn" type="url" placeholder="https://linkedin.com/in/…">
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="cv">Upload CV / resume <span class="field__hint">PDF or Word, up to 5 MB</span></label>
-              <input id="cv" name="attachment" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-            </div>
-
-            <div class="field">
-              <label for="message">Why do you want to join FishnFlame?</label>
-              <textarea id="message" name="Message" rows="5"></textarea>
-            </div>
+            </fieldset>
 
             <label class="check">
               <input type="checkbox" name="Consent" value="Yes" required>
+              <span class="check__box" aria-hidden="true"></span>
               <span>I agree that FishnFlame may store and use the details I've shared to contact me about job opportunities.</span>
             </label>
 
             <p class="form__error" id="formError" role="alert" hidden></p>
-            <button type="submit" class="btn btn--flame form__submit">Submit application</button>
+            <button type="submit" class="btn btn--flame form__submit">Submit application <span aria-hidden="true">→</span></button>
           </form>
         </div>
       </div>
@@ -233,6 +271,9 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js" defer></script>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="wavy"><feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="46"/></filter>
+  </svg>
+  <script src="/assets/js/main.js?v=20261021c" defer></script>
 </body>
 </html>

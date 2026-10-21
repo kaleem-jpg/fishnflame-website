@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Outfit:wght@600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/hero-burgers.webp">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261021c">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -45,7 +45,7 @@
         <a href="#vision">Vision</a>
         <a href="#team">Meet the Team</a>
         <a href="#contact" class="btn btn--flame btn--sm nav__cta">Partner with us</a>
-        <a href="careers" class="btn btn--outline btn--sm nav__cta">Careers</a>
+        <a href="careers" class="btn btn--flame btn--sm nav__cta">Careers</a>
       </nav>
       <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
@@ -408,27 +408,53 @@
           </h2>
           <p class="lead">The team transforming seafood expertise into a new-age QSR experience.</p>
         </div>
-        <div class="people">
-          <article class="person reveal">
-            <figure class="person__photo"><img src="assets/img/director-manoj.webp" alt="Manoj Kumar Sonkar" width="800" height="1000" loading="lazy"></figure>
-            <div class="person__body">
-              <p class="person__role">Founder &amp; Managing Director</p>
-              <h3>Manoj Kumar Sonkar</h3>
+
+        <div class="leaders">
+          <article class="leader reveal">
+            <div class="leader__media">
+              <span class="leader__blob" aria-hidden="true"></span>
+              <figure class="leader__photo"><img src="assets/img/director-manoj.webp" alt="Manoj Kumar Sonkar" width="800" height="1000" loading="lazy"></figure>
+              <div class="leader__stat"><strong>25+</strong><span>years in fish export</span></div>
+            </div>
+            <div class="leader__body">
+              <p class="eyebrow">Founder &amp; Managing Director</p>
+              <h3 class="leader__name">Manoj Kumar Sonkar</h3>
+              <p class="leader__intro">Managing Director of the Arnav Group, bringing deep industry knowledge, entrepreneurial vision and a strong foundation in the seafood business.</p>
               <p>With over 25 years of experience in the fish export industry, Manoj, Managing Director of the Arnav Group, brings deep industry knowledge, entrepreneurial vision, and a strong foundation in the seafood business. Building on the success and expertise of Arnav Fisheries Ltd., Expon Polymers Pvt. Ltd., and Arnav Fish International, he is now poised to take the next strategic leap by entering the Quick Service Restaurant (QSR) industry.</p>
               <p>Through FishnFlame, a consumer-focused retail food chain, Manoj aims to transform how people experience seafood by offering a delectable range of healthy, convenient, and protein-rich fish-based food products.</p>
+              <div class="leader__tags">
+                <span class="leader__tags-label">Group companies</span>
+                <ul>
+                  <li>Arnav Fisheries Ltd.</li>
+                  <li>Expon Polymers Pvt. Ltd.</li>
+                  <li>Arnav Fish International</li>
+                </ul>
+              </div>
             </div>
           </article>
-          <article class="person reveal">
-            <figure class="person__photo"><img src="assets/img/director-laiqur.webp" alt="Laiqur Rahman" width="800" height="1000" loading="lazy"></figure>
-            <div class="person__body">
-              <p class="person__role">Director</p>
-              <h3>Laiqur Rahman</h3>
-              <ul class="person__tags">
-                <li>Retail &amp; Business Transformation Leader</li>
-                <li>Entrepreneur</li>
-                <li>Omnichannel &amp; D2C Growth Strategist</li>
-              </ul>
+
+          <article class="leader leader--flip reveal">
+            <div class="leader__media">
+              <span class="leader__blob" aria-hidden="true"></span>
+              <figure class="leader__photo"><img src="assets/img/director-laiqur.webp" alt="Laiqur Rahman" width="800" height="1000" loading="lazy"></figure>
+              <div class="leader__stat"><strong>25+</strong><span>years in retail &amp; supply chain</span></div>
+            </div>
+            <div class="leader__body">
+              <p class="eyebrow">Director</p>
+              <h3 class="leader__name">Laiqur Rahman</h3>
+              <p class="leader__intro">Retail &amp; Business Transformation Leader · Entrepreneur · Omnichannel &amp; D2C Growth Strategist</p>
               <p>An MBA-qualified business leader and entrepreneur with over 25 years of experience in retail, supply chain management, merchandising, strategic sourcing, vendor management, and business development. Proven expertise in building businesses from the ground up, developing scalable operating models, and driving sustainable growth through innovative marketing strategies and customer-centric business approaches.</p>
+              <div class="leader__tags">
+                <span class="leader__tags-label">Expertise</span>
+                <ul>
+                  <li>Retail</li>
+                  <li>Supply Chain</li>
+                  <li>Merchandising</li>
+                  <li>Strategic Sourcing</li>
+                  <li>Vendor Management</li>
+                  <li>Business Development</li>
+                </ul>
+              </div>
             </div>
           </article>
         </div>
@@ -497,6 +523,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js?v=20261021c" defer></script>
 </body>
 </html>

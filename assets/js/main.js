@@ -92,15 +92,37 @@
       window.addEventListener("load", () => success.scrollIntoView({ block: "center" }));
     }
 
+    // CV drop zone: show the chosen file name and accept drag and drop
+    const cvInput = document.getElementById("cv");
+    const cvName = document.getElementById("cvName");
+    const drop = cvInput.closest(".drop");
+    const showFile = () => {
+      const f = cvInput.files[0];
+      cvName.textContent = f ? f.name : "Upload your CV / resume";
+      drop.classList.toggle("has-file", Boolean(f));
+    };
+    cvInput.addEventListener("change", showFile);
+    ["dragenter", "dragover"].forEach((t) => drop.addEventListener(t, (e) => { e.preventDefault(); drop.classList.add("is-over"); }));
+    ["dragleave", "drop"].forEach((t) => drop.addEventListener(t, () => drop.classList.remove("is-over")));
+    drop.addEventListener("drop", (e) => {
+      e.preventDefault();
+      if (e.dataTransfer.files.length) { cvInput.files = e.dataTransfer.files; showFile(); }
+    });
+
+    const fail = (e, msg, el) => {
+      e.preventDefault();
+      error.textContent = msg;
+      error.hidden = false;
+      if (el) el.focus();
+    };
+
     form.addEventListener("submit", (e) => {
       error.hidden = true;
-      const cv = form.querySelector('input[type="file"]').files[0];
-      if (cv && cv.size > MAX_CV) {
-        e.preventDefault();
-        error.textContent = "Your CV is larger than 5 MB. Please upload a smaller file.";
-        error.hidden = false;
-        return;
-      }
+      form.classList.add("was-validated");
+      const invalid = form.querySelector(":invalid:not(fieldset)");
+      if (invalid) return fail(e, "Please fill in the highlighted fields before submitting.", invalid);
+      const cv = cvInput.files[0];
+      if (cv && cv.size > MAX_CV) return fail(e, "Your CV is larger than 5 MB. Please upload a smaller file.", cvInput);
       const btn = form.querySelector(".form__submit");
       btn.disabled = true;
       btn.textContent = "Sending…";
